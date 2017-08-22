@@ -1,0 +1,99 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    padding-top:100px;
+}
+.clear:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+#education span,#education_list h4{
+    padding-left: 30px;
+}
+#education_list span{
+    margin-left: 50px;
+}
+#person_skill{
+    margin-top: 20px;
+}
+#skill li{
+    color: #00aeef;
+    font-size: 17px;
+}
+#skill_list h3{
+    margin-top: 5px;
+}
+#project_list li{
+    font-size:16px;
+
+}
+#well_list p,#wellList p{
+    margin-left: 40px;
+}
+#title{
+    padding-top: 15px;
+}
+#self_msg li{
+    font-size: 16.5px;
+}
+#work{
+    padding-top: 10px;
+}
+#work span{
+    margin-left: 50px;
+}
+#work p {
+    margin: 14px 0 0 50px;
+}
+#work .p{
+    margin-left: 125px;
+}
+#certificate_content h3{
+    margin-top: 0;
+}
+figure.me {
+    height:200px;
+    width: 200px;
+    margin-left: 24px;
+    padding: 5px;
+}
+figure.me #back {
+    transform: rotatey(-180deg);
+    background-image: url("../img/code.png");
+    /*background-position: center bottom;*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    line-height: 48px;
+    display: none;
+}
+figure.me #back,figure.me #front {
+    transition: transform 1s;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    display: block;
+    border-radius: 5px;
+}
+figure.me #front{
+    background-image: url("../img/lkl.png");
+}
+figure.me:hover #front{
+    transform: rotatey(180deg);
+}
+figure.me:hover #back{
+    transform: rotatey(0deg);
+}
+
+
+

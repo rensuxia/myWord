@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>chart</title>
+    <style>
+        body{
+            padding-top: 80px;
+        }
+        #well_list p{
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+<!--nav导航-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--头部显示-->
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">Welcome</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--折叠内容-->
+        <div id="myCollapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="drop_menu">
+                <li class="active">
+                    <a href="#">Introduce</a>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html" data-toggle="dropdown">
+                        About me
+                        <span class="caret"></span>
+                    </a>
+                    <!--下拉菜单-->
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="index.html">基本信息</a>
+                        </li>
+                        <li>
+                            <a href="index.html">求职意向</a>
+                        </li>
+                        <li>
+                            <a href="index.html">教育背景</a>
+                        </li>
+                        <li>
+                            <a href="index.html">个人技能</a>
+                        </li>
+                        <li>
+                            <a href="index.html">项目经验</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="index.html">获得证书</a>
+                        </li>
+                        <li>
+                            <a href="index.html">自我评价</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+            </ul>
+            <!--右侧的内容-->
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <button type="button" class="btn btn-success" data-target="#modalBtn" data-toggle="modal">下载</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--模态框-->
+<div class="modal" id="modalBtn" data-backdrop="static">
+    <div class="modal-dialog text-center" style="position: fixed; top:50%; left:50%; transform: translate(-50%,-50%);">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" data-dismiss="modal">&times;</span>
+                <h3 class="modal-title" style="color: red">亲，模板只供参考噢！</h3>
+                <h4 style="color: #00bf00">亲Sorry</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2 hidden-xs">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        在校荣誉
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="carousel slide" data-ride="carousel" data-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img/image_01.jpg" alt="" class="img-responsive img-thumbnail">
+                            </div>
+                            <div class="item">
+                                <img src="img/image_02.jpg" alt="" class="img-responsive img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">三好学生</li>
+                    <li class="list-group-item">国家励志奖学金</li>
+                    <li class="list-group-item">弘毅奖学金</li>
+                    <li class="list-group-item">优秀毕业生</li>
+                    <li class="list-group-item">优秀志愿者</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-8 col-xs-12">
+            <div id="chart"></div>
+        </div>
+        <div class="col-sm-2 hidden-xs">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        其他技能
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="carousel slide" data-ride="carousel" data-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img/image_01.jpg" alt="" class="img-responsive img-thumbnail">
+                            </div>
+                            <div class="item">
+                                <img src="img/image_02.jpg" alt="" class="img-responsive img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item">Cisco局域网的搭建</li>
+                    <li class="list-group-item">Dreamweaver</li>
+                    <li class="list-group-item">PPT</li>
+                    <li class="list-group-item">Linux</li>
+                    <li class="list-group-item">网络管理</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="project">
+        <div class="col-sm-3 hidden-xs">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">项目经验</h4>
+                </div>
+                <div class="panel-body">
+                    <img src="img/sike.png" alt="" class="img-responsive">
+                </div>
+            </div>
+            <ul class="list-group" id="project_list" style="font-size: 19px">
+                <li class="list-group-item" style="color: #0f0;">在校项目</li>
+                <li class="list-group-item">项目名称</li>
+                <li class="list-group-item">项目网址</li>
+                <li class="list-group-item">项目描述</li>
+                <li class="list-group-item">项目功能</li>
+                <li class="list-group-item">实现技术</li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-xs-12">
+            <div class="well" id="well_list">
+                <h4>
+                    项目名称:
+                    <a href="#">局域网的搭建与配置</a>
+                </h4>
+                <h4>项目描述</h4>
+                <p>
+                    1、根据企业的结构做出详细的需求分析，设计并搭建网络结构
+                </p>
+                <p>
+                    2、配置相关网络设备（网络基础技术，交换技术，路由器配置等）
+                </p>
+                <p>
+                    3、验证配置效果(验证网络连通性效果以及需求功能是否达到设计要求)
+                </p>
+                <p>
+                    4、优化提高交换网络的设计（在基础配置成功的前提下，提高网络实时的高效性）
+                </p>
+                <p>
+                    5、在一定时间内加强访问控制时间
+                </p>
+                <p>
+                    6、在网络设备配置成功的基础上实施网络服务器的搭建
+                </p>
+                <p>
+                    7、利用网络服务器为网络用户提供信息与资源共享。
+                </p>
+                <h4>项目功能</h4>
+                <p>1、根据网络搭建的原理，搭建基本的网络拓扑结构</p>
+                <p>2、设置ip地址与端口规划，利用vlan以及路由协议等技术实现局域网的基本通信</p>
+                <p>3、在基本通信的基础上使用访问控制列表和ppp协议进行相关设置和优化</p>
+                <p>4、进行无线路由器的配置，实现信息共享</p>
+                <p>5、最后进行FTP、WEB、DNS等服务器的配置</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="navbar navbar-default ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="www.baidu.com">简历信息</a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="#">关于我的信息</a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="www.baidu.com">简历模板</a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="www.baidu.com">其他信息</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/fusioncharts.js"></script>
+<script src="js/fusioncharts.charts.js"></script>
+<script src="js/second.js"></script>
+
+</body>
+</html>
